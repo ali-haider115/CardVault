@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".FullScreenImageActivity">
+
+    <!-- Top Header Bar -->
+    <LinearLayout
+        android:id="@+id/header_full_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#80000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/btn_close_full_screen"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_grid_item"
+            android:contentDescription="@string/close"
+            android:padding="8dp"
+            android:src="@drawable/ic_profile"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_full_screen_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Front Side Image" />
+
+    </LinearLayout>
+
+    <!-- Large FitCenter Image -->
+    <ImageView
+        android:id="@+id/iv_full_screen_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_full_screen"
+        android:contentDescription="@string/card_details_title"
+        android:padding="16dp"
+        android:scaleType="fitCenter" />
+
+</RelativeLayout>
